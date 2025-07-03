@@ -1,0 +1,129 @@
+<!-- ABOUT SECTION YANG DIMODIFIKASI -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tentang Kami</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+    .section-title { font-weight: 700; }
+    .btn-outline-success:hover { background-color: #198754; color: #fff; }
+    .navbar.bg-dark {
+      background: linear-gradient(135deg, #0d6efd, #6610f2, #6f42c1);
+      background-size: 200% 200%;
+      animation: uiGlow 6s ease infinite;
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+    }
+    @keyframes uiGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .navbar .nav-link:hover {
+      color: #ffc107 !important;
+      text-shadow: 0 0 5px #ffc107;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="logonav.png" alt="Logo" width="30" height="30" class="me-2">
+        PRODIGY STORE
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="katalog.html"><i class="fas fa-store"></i> Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="About.html"><i class="fas fa-circle-info"></i> About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title mb-4">Tentang Prodigy Store</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <p>Prodigy Store adalah platform digital yang menyediakan katalog eBook, desain, dan produk digital lainnya. Dengan antarmuka yang modern dan pengalaman pengguna yang optimal, kami bertujuan untuk mempermudah akses informasi dan konten berkualitas.</p>
+          <p>Website ini merupakan bagian dari project base metode penelitian (metpen) sebagai tugas dalam pembuatan proposal skripsi. Tujuannya adalah menganalisis perilaku pengguna terhadap desain antarmuka dan kemudahan dalam mengakses katalog digital.</p>
+          <p>Kami mengundang pengguna untuk memberikan dukungan dan masukan sebagai pertimbangan untuk mengembangkan platform ini ke tahap berikutnya.</p>
+
+          <h5 class="mt-4">Apakah kamu setuju jika website ini dikembangkan lebih lanjut?</h5>
+          <div class="mt-3">
+            <button class="btn btn-outline-success me-2" onclick="kirimDukungan('Saya Setuju')">Saya Setuju</button>
+          <button class="btn btn-outline-danger" onclick="kirimDukungan('Tidak Setuju')">Tidak Setuju</button>
+
+        <div id="responseBox" class="alert alert-success mt-3 d-none">Terima kasih atas dukunganmu! ✅</div>
+
+<script>
+  function kirimDukungan(jawaban) {
+    fetch("https://script.google.com/macros/s/AKfycbxpJoGfeBmivCdjG24mXs2avt53JqEG4HghRaTZTQ-8B_q84-UgspBOlulDznhCX29t/exec", {
+      method: "POST",
+      body: JSON.stringify({ jawaban }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(res => {
+      document.getElementById('responseBox').classList.remove('d-none');
+    })
+    .catch(err => console.error("Gagal kirim:", err));
+  }
+</script>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer class="text-white pt-5 pb-3" style="background-color: #343a40;">
+  <div class="container">
+    <div class="row">
+      
+  
+    <!-- Kontak -->
+      <div class="col-md-4 mb-4">
+        <h5>📩 Kontak</h5>
+        <p class="small mb-1"><i class="fas fa-envelope"></i> email@example.com</p>
+        <p class="small"><i class="fas fa-phone"></i> +62 857-6250-9887</p>
+      </div>
+
+      <!-- Sosial Media -->
+      <div class="col-md-4 mb-4">
+        <h5>🌐 Ikuti Kami</h5>
+        <a href="https://www.instagram.com/prodigystore.id?igsh=d2g2bjhiNW5tMDZ6" class="text-white me-3" target="_blank">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577422133828" class="text-white me-3" target="_blank">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="https://wa.me/6285762509887" class="text-white" target="_blank">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="border-top border-secondary">
+    <p class="text-center small mb-0">&copy; 2025 Katalog Produk Digital — All rights reserved</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

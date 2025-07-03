@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hot Book | Prodigy Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+    .card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); transition: all 0.3s ease-in-out; }
+    .navbar.bg-dark {
+      background: linear-gradient(135deg, #0d6efd, #6610f2, #6f42c1);
+      background-size: 200% 200%;
+      animation: glow 6s ease infinite;
+    }
+    @keyframes glow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  .card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  }
+
+   .carousel-item img {
+      width: 45%;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-item img:hover {
+      transform: scale(1.03);
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logonav.png" alt="Logo" width="30" height="30" class="me-2"/>PRODIGY STORE
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-fire"></i>Hot Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="katalog.html"><i class="fas fa-store"></i>Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-5 text-center bg-light" data-aos="fade-up">
+    <div class="container">
+      <h1 class="display-4 fw-bold">🔥 Hot Book Minggu Ini</h1>
+      <p class="lead">Temukan eBook paling banyak dicari dan dibaca oleh anak muda. Siap mengubah cara belajarmu?</p>
+    </div>
+  </section>
+
+  <!-- eBook Cards -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row text-center mb-4">
+        <h2 class="section-title">Top 6 eBook Paling Dicari</h2>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        
+<div class="col">
+  <div class="card h-100 shadow-sm" data-aos="fade-up">
+    <img src="hotbok3.png" class="card-img-top" alt="eBook 1"/>
+    <div class="card-body">
+      <h5 class="card-title">AI dan Masa Depan Pekerjaan</h5>
+      <p class="card-text">Robot bukan musuhmu. Mereka justru bakal jadi partner kerja.</p>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm" data-aos="fade-up">
+    <img src="hotbok5.png" class="card-img-top" alt="eBook 2"/>
+    <div class="card-body">
+      <h5 class="card-title">Self Improvement: Fokus dan Produktivitas</h5>
+      <p class="card-text">Mulai hari ini lebih fokus, lebih produktif. Bisa latihan juga!</p>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm" data-aos="fade-up">
+    <img src="hotbok2.png" class="card-img-top" alt="eBook 3"/>
+    <div class="card-body">
+      <h5 class="card-title">Mental Health Gen Z</h5>
+      <p class="card-text">Tenang itu penting. Buku ini bantu kamu pahami dirimu.</p>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm" data-aos="fade-up">
+    <img src="hotbok1.png" class="card-img-top" alt="eBook 4"/>
+    <div class="card-body">
+      <h5 class="card-title">Digital Marketing Dasar</h5>
+      <p class="card-text">Mau viral? Belajar dasarnya dulu dari eBook ini.</p>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm" data-aos="fade-up">
+    <img src="hotbok6.png" class="card-img-top" alt="eBook 5"/>
+    <div class="card-body">
+      <h5 class="card-title">Cara Cepat Belajar Desain Canva</h5>
+      <p class="card-text">Desain nggak harus ribet. EBook ini bahas step-by-step.</p>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm" data-aos="fade-up">
+    <img src="hotbok4.png" class="card-img-top" alt="eBook 6"/>
+    <div class="card-body">
+      <h5 class="card-title">Mindset Finansial Gen Z</h5>
+      <p class="card-text">Biar nggak boncos, yuk atur mindset uang sejak muda.</p>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+ <!-- Carousel Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">E-book Pilihan Terpopuler</h2>
+    <div id="carouselEbook" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 (active) -->
+    <div class="carousel-item active">
+      <div class="d-flex justify-content-center gap-3">
+        <img src="ebook2.jpg" alt="Ebook 1" class="rounded" style="width:45%;">
+        <img src="ebook4.jpg" alt="Ebook 2" class="rounded" style="width:45%;">
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center gap-3">
+        <img src="hotbok3.png" alt="Ebook 3" class="rounded" style="width:45%;">
+        <img src="hotbok4.png" alt="Ebook 4" class="rounded" style="width:45%;">
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="d-flex justify-content-center gap-3">
+        <img src="hotbok1.png" alt="Ebook 5" class="rounded" style="width:45%;">
+        <img src="hotbok5.png" alt="Ebook 6" class="rounded" style="width:45%;">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Tombol -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselEbook" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselEbook" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+</section>
+
+
+
+  <!-- Berita Hot -->
+  <section class="py-5 bg-light" data-aos="zoom-in">
+    <div class="container">
+      <h2 class="section-title text-center">📢 Berita & Fakta Dunia eBook</h2>
+      <ul class="list-group list-group-flush fs-5">
+        <li class="list-group-item">📊 Survei: 6 dari 10 mahasiswa lebih nyaman belajar pakai eBook.</li>
+        <li class="list-group-item">🌏 Indonesia jadi 5 besar pengguna eBook terbesar se-Asia Tenggara.</li>
+        <li class="list-group-item">💡 Kategori self-improvement naik 230% sejak 2023.</li>
+        <li class="list-group-item">📱 Gen Z membaca eBook rata-rata 20 menit/hari via HP.</li>
+        <li class="list-group-item">📚 70% pengguna bilang: “eBook mengubah hidupku!”</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-center">💬 Apa Kata Mereka?</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>“Baru baca 1 eBook aja udah langsung tercerahkan. Gila sih!”</p>
+            <footer class="blockquote-footer">Raka, 19 th</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>“Biasanya males baca, sekarang malah ketagihan.”</p>
+            <footer class="blockquote-footer">Nisa, Freelancer</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>“Topik self-help-nya bener-bener relate sama hidupku.”</p>
+            <footer class="blockquote-footer">Andre, Mahasiswa</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2 class="fw-bold">Siap Upgrade Diri?</h2>
+      <p class="lead">Mulai petualangan belajarmu dengan eBook terbaik sekarang juga. Gratis akses 1 eBook pertama!</p>
+      <a href="index.html" class="btn btn-light mt-3">Mari Ke Beranda</a>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer class="text-white pt-5 pb-3" style="background-color: #343a40;">
+  <div class="container">
+    <div class="row">
+      
+  
+    <!-- Kontak -->
+      <div class="col-md-4 mb-4">
+        <h5>📩 Kontak</h5>
+        <p class="small mb-1"><i class="fas fa-envelope"></i> email@example.com</p>
+        <p class="small"><i class="fas fa-phone"></i> +62 857-6250-9887</p>
+      </div>
+
+      <!-- Sosial Media -->
+      <div class="col-md-4 mb-4">
+        <h5>🌐 Ikuti Kami</h5>
+        <a href="https://www.instagram.com/prodigystore.id?igsh=d2g2bjhiNW5tMDZ6" class="text-white me-3" target="_blank">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577422133828" class="text-white me-3" target="_blank">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="https://wa.me/6285762509887" class="text-white" target="_blank">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="border-top border-secondary">
+    <p class="text-center small mb-0">&copy; 2025 Katalog Produk Digital — All rights reserved</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

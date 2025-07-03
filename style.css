@@ -1,0 +1,91 @@
+/* Versi hasil revisi style.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Navbar Styling */
+.navbar.bg-dark {
+  background: linear-gradient(-45deg, #3c51bc, #fefeff, #007bff, black);
+  background-size: 400% 400%;
+  animation: changeColor 8s ease infinite;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes changeColor {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107 !important;
+  text-shadow: 0 0 5px #ffc107;
+}
+
+/* Hero Section */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+.hero .btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+}
+
+/* Card Hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Footer */
+footer {
+  background: #343a40;
+  color: white;
+  margin-top: 50px;
+}
+
+/* Form Input Focus */
+.form-control:focus {
+  box-shadow: none;
+  border-color: #007bff;
+}
+
+/* Alert */
+#formAlert {
+  transition: all 0.4s ease;
+}
+
+/* Custom Utilities (Opsional) */
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.btn-primary:hover {
+  background-color: #084298;
+  border-color: #084298;
+}
+
+.btn-outline-secondary:hover {
+  color: white;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.img-fluid {
+  border-radius: 0.25rem;
+}
+
+/* Typography */
+h2, h5 {
+  font-weight: 600;
+}
+.text-muted {
+  color: #6c757d !important;
+}

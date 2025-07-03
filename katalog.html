@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="id">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Katalog Produk</title>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXQ274GMCT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DXQ274GMCT');
+</script>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <!-- SweetAlert2 -->
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+    .card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); transition: all 0.3s ease-in-out; }
+    footer { background: #343a40; color: white; }
+    .navbar.bg-dark {
+  background: linear-gradient(135deg, #0d6efd, #6610f2, #6f42c1);
+  background-size: 200% 200%;
+  animation: uiGlow 6s ease infinite;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+}
+
+@keyframes uiGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107 !important;
+  text-shadow: 0 0 5px #ffc107;
+}
+
+  </style>
+
+<style>
+  .modal-content {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+
+  .modal-header {
+    background-color: #0d6efd;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .modal-footer {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  #extraDetail {
+    display: none;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  
+</style>
+
+</head>
+<body>
+
+ <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="login.html">
+     <img src="logonav.png" alt="Logo" width="30" height="30" class="me-2">
+      PRODIGY STORE
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="katalog.html"><i class="fas fa-store"></i>Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="	fas fa-envelope"></i>Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html"><i class="	fas fa-envelope"></i>About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- BAGIAN KATALOG EBOOK DIGITAL: ADA LABEL HOT DAN TERLARIS -->
+<section class="container py-5">
+  <h2 class="text-center mb-4"><strong>Katalog E-Book</strong></h2>
+  <div class="row g-4">
+
+    <!-- PRODUK 1 - HOT BOOK -->
+    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card h-100 border border-danger position-relative">
+        <span class="badge bg-danger position-absolute top-0 start-0 m-2">🔥 Hot</span>
+        <img src="hotbok3.png" class="card-img-top" alt="Pasar Modal">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Al dan Masa Depan Pekerjaan</h5>
+          <p class="card-text">Robot bukan ancaman, tapi partner kerja masa depan. E-book ini bantu kamu pahami peran AI dan skill yang wajib dikuasai biar tetap relevan</p>
+           <strong> 📘 Siap beradaptasi bareng teknologi? Yuk, pesan sekarang!</strong>
+          <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalPasarModal">Detail / Pesan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Produk 1 -->
+    <div class="modal fade" id="modalPasarModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Al dan Masa Depan Pekerjaan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img src="hotbok3.png" class="img-fluid mb-3">
+            <p>Al memudahkan kita dalam melakukan Pekerjaan, ia merupakan suatu program dengan teknlogi canggih yaitu Artificial (Intelligence)</p>
+            <ul>
+              <li><strong>Harga:</strong> Rp80.000</li>
+              <li><strong>Terjual:</strong> 1.248 kopi</li>
+              <li><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.5)</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUK 2 - HOT BOOK -->
+    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card h-100 border border-danger position-relative">
+        <span class="badge bg-danger position-absolute top-0 start-0 m-2">🔥 Hot</span>
+        <img src="hotbok6.png" class="card-img-top" alt="Pasar Modal">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Cara Cepat Belajar Desain Canva</h5>
+          <p class="card-text">Bikin desain keren tanpa ribet! E-book ini ajarin step-by-step dari nol sampai bisa bikin konten estetik buat sosmed atau tugas</p>
+          <p></p>
+            <strong>🎨 Mulai desain sekarang, klik tombol pesan!</strong>
+          <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalPasarModal">Detail / Pesan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Produk 2 -->
+    <div class="modal fade" id="modalPasarModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cara Cepat Belajar Desain Canva</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img src="hotbok6.png" class="img-fluid mb-3">
+            <p>Desain nggak harus ribet. EBook ini bahas step-by-step</p>
+            <ul>
+              <li><strong>Harga:</strong> Rp38.000</li>
+              <li><strong>Terjual:</strong> 1.248 kopi</li>
+              <li><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.5)</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUK 1 - TERLARIS -->
+    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card h-100 border border-success position-relative">
+        <span class="badge bg-success position-absolute top-0 start-0 m-2">🔥 Terlaris</span>
+        <img src="hotbok2.png" class="card-img-top" alt="Efektif Sukses">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Mental Health Gen Z</h5>
+          <p class="card-text">Tenang itu penting. Buku ini bantu kamu kenali, pahami, dan jaga kesehatan mental di tengah tekanan zaman</p>
+            <p></p>
+            <strong>🧠 Yuk, pahami dirimu lebih dalam. Pesan e-book ini sekarang!</strong>
+
+          <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalEfektif">Detail / Pesan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Produk 1 -->
+    <div class="modal fade" id="modalEfektif" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Belajar Efektif untuk Sukses</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img src="hotbok2.png" class="img-fluid mb-3">
+            <p>buku ini memberi kamu pemahaman dengan mental yang sehat, bagaiaman meditasi yang baik dan membuat kamu menjadi pribadi yang lebih baik!</p>
+            <ul>
+              <li><strong>Harga:</strong> Rp100.000</li>
+              <li><strong>Terjual:</strong> 2.032 kopi</li>
+              <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5.0)</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+           <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUK 2 - TERLARIS -->
+    <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card h-100 border border-success position-relative">
+        <span class="badge bg-success position-absolute top-0 start-0 m-2">🔥 Terlaris</span>
+        <img src="hotbok1.png" class="card-img-top" alt="Efektif Sukses">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Digital Marketing Dasar</h5>
+          <p class="card-text">Mau viral dan bisnis makin dikenal? Pelajari dasar digital marketing dari e-book ini, cocok buat pemula yang mau go digital!</p>
+          <p></p>
+            <strong>📈 Ambil langkah pertamamu sekarang, klik pesan!</strong>
+          <button class="btn btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#modalEfektif">Detail / Pesan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Produk 2 -->
+    <div class="modal fade" id="modalEfektif" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Digital Marketing Dasar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <img src="hotbok1.png" class="img-fluid mb-3">
+            <p>Mau viral? Belajar dasarnya dulu dari eBook ini</p>
+            <ul>
+              <li><strong>Harga:</strong> Rp150.000</li>
+              <li><strong>Terjual:</strong> 2.032 kopi</li>
+              <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5.0)</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <a href="https://wa.me/6281234567890" class="btn btn-primary">Pesan Sekarang</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Produk Card -->
+<!-- PRODUK 1 -->
+<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+  <div class="card h-100">
+    <img src="ebook0 (2).png" class="card-img-top" alt="Pasar Modal">
+    <div class="card-body">
+      <h5 class="card-title">Belajar dan Paham Pasar Modal</h5>
+      <p class="card-text">E-book ini memberikan panduan awal bagi pemula untuk memahami dunia pasar modal secara digital.</p>
+      <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalProduk1">Detail / Pesan</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalProduk1" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Belajar dan Paham Pasar Modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="ebook0 (2).png" class="img-fluid mb-3">
+        <p>Untuk kamu yang ingin belajar investasi, e-book ini bantu kamu pahami dasar-dasar pasar modal di era digital.</p>
+        <button class="btn btn-outline-secondary" onclick="toggleDetail('detail1')">Lebih Detail</button>
+        <div id="detail1" style="display:none;">
+          <ul>
+            <li><strong>Harga:</strong> Rp50.000</li>
+            <li><strong>Terjual:</strong> 2.032 kopi</li>
+            <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5.0)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="http://127.0.0.1:5500/ujiebook.html" class="btn btn-primary">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUK 2 -->
+<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+  <div class="card h-100">
+    <img src="ebook1.jpg" class="card-img-top" alt="Belajar Efektif">
+    <div class="card-body">
+      <h5 class="card-title">Belajar Efektif untuk Sukses</h5>
+      <p class="card-text">Bukan soal waktu, tapi cara belajar yang tepat. Cocok untuk pelajar yang ingin makin fokus dan paham.</p>
+      <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalProduk2">Detail / Pesan</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalProduk2" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Belajar Efektif untuk Sukses</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="ebook1.jpg" class="img-fluid mb-3">
+        <p>E-book ini bantu kamu temukan metode belajar yang fokus, cepat paham, dan tahan lama di otak.</p>
+        <button class="btn btn-outline-secondary" onclick="toggleDetail('detail2')">Lebih Detail</button>
+        <div id="detail2" style="display:none;">
+          <ul>
+            <li><strong>Harga:</strong> Rp35.000</li>
+            <li><strong>Terjual:</strong> 1.685 kopi</li>
+            <li><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.8)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUK 3 -->
+<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+  <div class="card h-100">
+    <img src="ebook2.jpg" class="card-img-top" alt="Menjelajah Dunia">
+    <div class="card-body">
+      <h5 class="card-title">Menjelajah Dunia</h5>
+      <p class="card-text">Jelajahi keindahan dunia dan budayanya dari rumah. Cerita, foto, dan inspirasi perjalanan ada di sini.</p>
+      <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalProduk3">Detail / Pesan</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalProduk3" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Menjelajah Dunia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="ebook2.jpg" class="img-fluid mb-3">
+        <p>Bukan sekadar destinasi, tapi kisah, budaya, dan pelajaran hidup yang membuka mata dan hati.</p>
+        <button class="btn btn-outline-secondary" onclick="toggleDetail('detail3')">Lebih Detail</button>
+        <div id="detail3" style="display:none;">
+          <ul>
+            <li><strong>Harga:</strong> Rp47.000</li>
+            <li><strong>Terjual:</strong> 2.178 kopi</li>
+            <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5.0)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- PRODUK 4 -->
+<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+  <div class="card h-100">
+    <img src="ebook3.jpg" class="card-img-top" alt="Jadilah Versi Terbaikmu">
+    <div class="card-body">
+      <h5 class="card-title">Jadilah Versi Terbaikmu</h5>
+      <p class="card-text">E-book self-improvement untuk bantu kamu kenal diri, atur tujuan, dan jadi versi terbaik dari dirimu.</p>
+      <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalProduk4">Detail / Pesan</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalProduk4" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Jadilah Versi Terbaikmu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="ebook3.jpg" class="img-fluid mb-3">
+        <p>Bantu kamu kenali potensi diri, melatih konsistensi, dan memperkuat growth mindset dengan langkah kecil yang berdampak besar.</p>
+        <button class="btn btn-outline-secondary" onclick="toggleDetail('detail4')">Lebih Detail</button>
+        <div id="detail4" style="display:none;">
+          <ul>
+            <li><strong>Harga:</strong> Rp42.000</li>
+            <li><strong>Terjual:</strong> 1.220 kopi</li>
+            <li><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.7)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUK 5 -->
+<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+  <div class="card h-100">
+    <img src="ebook4.jpg" class="card-img-top" alt="Di Balik Senja">
+    <div class="card-body">
+      <h5 class="card-title">Di Balik Senja</h5>
+      <p class="card-text">Cerita cinta hangat tentang harapan yang tumbuh diam-diam. Cocok buat kamu yang suka kisah mellow tapi manis.</p>
+      <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalProduk5">Detail / Pesan</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalProduk5" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Di Balik Senja</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="ebook4.jpg" class="img-fluid mb-3">
+        <p>Rindu, janji, dan harapan yang tertinggal di antara langit senja. E-book ini menghangatkan hari kamu.</p>
+        <button class="btn btn-outline-secondary" onclick="toggleDetail('detail5')">Lebih Detail</button>
+        <div id="detail5" style="display:none;">
+          <ul>
+            <li><strong>Harga:</strong> Rp30.000</li>
+            <li><strong>Terjual:</strong> 3.245 kopi</li>
+            <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5.0)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUK 6 -->
+<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+  <div class="card h-100">
+    <img src="ebook5.jpg" class="card-img-top" alt="Mengenal Dunia Digital">
+    <div class="card-body">
+      <h5 class="card-title">Mengenal Dunia Digital</h5>
+      <p class="card-text">Teknologi makin cepat, e-book ini bantu kamu paham tren digital dari dasar sampai lanjut. Wajib buat Gen Z dan Alpha!</p>
+      <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalProduk6">Detail / Pesan</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalProduk6" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Mengenal Dunia Digital</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="ebook5.jpg" class="img-fluid mb-3">
+        <p>Panduan ringan namun lengkap untuk memahami dunia digital: AI, big data, hingga keamanan digital.</p>
+        <button class="btn btn-outline-secondary" onclick="toggleDetail('detail6')">Lebih Detail</button>
+        <div id="detail6" style="display:none;">
+          <ul>
+            <li><strong>Harga:</strong> Rp39.000</li>
+            <li><strong>Terjual:</strong> 1.950 kopi</li>
+            <li><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.6)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+       <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUK 7 -->
+<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+  <div class="card h-100">
+    <img src="ebook6.jpg" class="card-img-top" alt="Hidup Sehat Setiap Hari">
+    <div class="card-body">
+      <h5 class="card-title">Hidup Sehat Setiap Hari</h5>
+      <p class="card-text">Panduan gaya hidup sehat: makan, tidur, olahraga yang simpel tapi powerful. Cocok buat gaya hidup sibuk!</p>
+      <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalProduk7">Detail / Pesan</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalProduk7" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Hidup Sehat Setiap Hari</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="ebook6.jpg" class="img-fluid mb-3">
+        <p>Langkah sehat dari hal kecil, cocok buat pemula yang mau mulai hidup sehat tanpa ribet.</p>
+        <button class="btn btn-outline-secondary" onclick="toggleDetail('detail7')">Lebih Detail</button>
+        <div id="detail7" style="display:none;">
+          <ul>
+            <li><strong>Harga:</strong> Rp32.000</li>
+            <li><strong>Terjual:</strong> 1.300 kopi</li>
+            <li><strong>Rating:</strong> ⭐⭐⭐⭐☆ (4.5)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- PRODUK 8 -->
+<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+  <div class="card h-100">
+    <img src="ebook7.jpg" class="card-img-top" alt="Strategi Bisnis Masa Kini">
+    <div class="card-body">
+      <h5 class="card-title">Strategi Bisnis Masa Kini</h5>
+      <p class="card-text">Strategi jitu untuk UMKM dan startup: branding, digital marketing, hingga studi kasus lokal. Praktis dan relevan!</p>
+      <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#modalProduk8">Detail / Pesan</button>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modalProduk8" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Strategi Bisnis Masa Kini</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="ebook7.jpg" class="img-fluid mb-3">
+        <p>Strategi bisnis kekinian yang mudah diterapkan untuk pelaku UMKM, freelancer, dan pebisnis pemula.</p>
+        <button class="btn btn-outline-secondary" onclick="toggleDetail('detail8')">Lebih Detail</button>
+        <div id="detail8" style="display:none;">
+          <ul>
+            <li><strong>Harga:</strong> Rp55.000</li>
+            <li><strong>Terjual:</strong> 2.870 kopi</li>
+            <li><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5.0)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="showBetaNotification()">Pesan Sekarang</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+/center
+
+
+<!-- FOOTER -->
+<footer class="text-white pt-5 pb-3" style="background-color: #343a40;">
+  <div class="container">
+    <div class="row">
+      
+  
+    <!-- Kontak -->
+      <div class="col-md-4 mb-4">
+        <h5>📩 Kontak</h5>
+        <p class="small mb-1"><i class="fas fa-envelope"></i> email@example.com</p>
+        <p class="small"><i class="fas fa-phone"></i> +62 857-6250-9887</p>
+      </div>
+
+      <!-- Sosial Media -->
+      <div class="col-md-4 mb-4">
+        <h5>🌐 Ikuti Kami</h5>
+        <a href="https://www.instagram.com/prodigystore.id?igsh=d2g2bjhiNW5tMDZ6" class="text-white me-3" target="_blank">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577422133828" class="text-white me-3" target="_blank">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="https://wa.me/6285762509887" class="text-white" target="_blank">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="border-top border-secondary">
+    <p class="text-center small mb-0">&copy; 2025 Katalog Produk Digital — All rights reserved</p>
+  </div>
+
+<script>
+  window.onload = function () {
+    let chat = document.createElement("a");
+    chat.href = "https://wa.me/6281234567890";
+    chat.target = "_blank";
+    chat.innerHTML = `<img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">`;
+    document.body.appendChild(chat);
+  };
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+<script>
+  function toggleDetail() {
+    var detail = document.getElementById("extraDetail");
+    if (detail.style.display === "none") {
+      detail.style.display = "block";
+    } else {
+      detail.style.display = "none";
+    }
+  }
+</script>
+<script>
+  function toggleDetail(id) {
+    const detail = document.getElementById(id);
+    if (detail.style.display === "none" || detail.style.display === "") {
+      detail.style.display = "block";
+    } else {
+      detail.style.display = "none";
+    }
+  }
+</script>
+
+<script>
+  function showBetaNotification() {
+    Swal.fire({
+      title: 'E-book Masih Beta',
+      text: 'Mohon maaf! E-book ini belum tersedia untuk diunduh karena masih dalam tahap beta. Silakan cek kembali nanti ya 😊🙏',
+      icon: 'info',
+      confirmButtonText: 'Oke, mengerti',
+      confirmButtonColor: '#3085d6',
+      backdrop: `
+        rgba(0,0,123,0.3)
+        left top
+        no-repeat
+      `
+    });
+  }
+</script>
+
+
+</body>
+</html>
+
+

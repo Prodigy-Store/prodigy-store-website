@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak Kami</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+ <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TX2W2SCD');
+  </script>
+   <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+    .card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); transition: all 0.3s ease-in-out; }
+    footer { background: #343a40; color: white; }
+    .navbar.bg-dark {
+  background: linear-gradient(135deg, #0d6efd, #6610f2, #6f42c1);
+  background-size: 200% 200%;
+  animation: uiGlow 6s ease infinite;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+}
+
+@keyframes uiGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107 !important;
+  text-shadow: 0 0 5px #ffc107;
+}
+
+  </style>
+  
+</head>
+<body>
+
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX2W2SCD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+     <img src="logonav.png" alt="Logo" width="30" height="30" class="me-2">
+      PRODIGY STORE
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="katalog.html"><i class="fas fa-store"></i>Product</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html"><i class="	fas fa-envelope"></i>Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html"><i class="	fas fa-envelope"></i>About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- FORM KONTAK -->
+<section class="form-section">
+  <div class="container">
+    <h2 class="text-center mb-4">Hubungi Kami</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" placeholder="Nama lengkap" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Alamat email" required>
+          </div>
+          <div class="mb-3">
+            <label for="pesan" class="form-label">Pesan</label>
+            <textarea class="form-control" id="pesan" rows="4" placeholder="Tulis pesan..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
+        </form>
+        <div class="text-center mt-3">
+          <p class="text-muted">Atau hubungi langsung via <a href="https://wa.me/62xxxxxxx">WhatsApp</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white pt-5 pb-3" style="background-color: #343a40;">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Tentang -->
+      <div class="col-md-4 mb-4">
+        <h5>🔍 Tentang Prodigy Store</h5>
+        <p class="small">Prodigy Store adalah platform katalog digital untuk eBook, desain, dan produk digital lainnya dengan tampilan modern dan akses cepat.</p>
+      </div>
+
+      <!-- Kontak -->
+      <div class="col-md-4 mb-4">
+        <h5>📩 Kontak</h5>
+        <p class="small mb-1"><i class="fas fa-envelope"></i> email@example.com</p>
+        <p class="small"><i class="fas fa-phone"></i> +62 857-6250-9887</p>
+      </div>
+
+      <!-- Sosial Media -->
+      <div class="col-md-4 mb-4">
+        <h5>🌐 Ikuti Kami</h5>
+        <a href="https://www.instagram.com/prodigystore.id?igsh=d2g2bjhiNW5tMDZ6" class="text-white me-3" target="_blank">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577422133828" class="text-white me-3" target="_blank">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="https://wa.me/6285762509887" class="text-white" target="_blank">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="border-top border-secondary">
+    <p class="text-center small mb-0">&copy; 2025 Katalog Produk Digital — All rights reserved</p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>
+

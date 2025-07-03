@@ -1,0 +1,433 @@
+<!-- Versi hasil revisi file pertama: index.html -->
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda | Prodigy Store Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+   <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f8f9fa; }
+    .card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); transform: translateY(-5px); transition: all 0.3s ease-in-out; }
+    footer { background: #343a40; color: white; }
+    .navbar.bg-dark {
+  background: linear-gradient(135deg, #0d6efd, #6610f2, #6f42c1);
+  background-size: 200% 200%;
+  animation: uiGlow 6s ease infinite;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+}
+
+@keyframes uiGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar .nav-link:hover {
+  color: #ffc107 !important;
+  text-shadow: 0 0 5px #ffc107;
+}
+
+.bot-bubble-container {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  display: flex;
+  align-items: flex-start;
+  animation: floatUpDown 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+.bot-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border: 2px solid white;
+}
+
+.bot-bubble {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 10px 15px;
+  max-width: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: bubbleFade 6s ease-in-out infinite;
+}
+
+@keyframes bubbleFade {
+  0%, 100% { opacity: 0; transform: translateY(0); }
+  20% { opacity: 1; transform: translateY(-5px); }
+  80% { opacity: 1; transform: translateY(-5px); }
+}
+
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.bot-avatar-deco {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  z-index: 2;
+}
+
+.bot-avatar-deco img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.bot-bubble-container {
+  margin-top: 1rem;
+}
+
+.bot-bubble {
+  animation: bubbleFade 1.5s ease-in-out infinite alternate;
+  max-width: 100%;
+}
+
+@keyframes bubbleFade {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.03); opacity: 0.95; }
+}
+
+.bot-avatar {
+  border: 2px solid #0d6efd;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+}
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="hotbook.html">
+     <img src="logonav.png" alt="Logo" width="30" height="30" class="me-2">
+      PRODIGY STORE
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="login.html"</li>
+          <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i>Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="katalog.html"><i class="fas fa-store"></i>Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="	fas fa-envelope"></i>Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html"><i class="	fas fa-envelope"></i>About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <!-- HERO SECTION: VIDEO BACKGROUND (diperkecil tinggi) -->
+<section class="hero-section position-relative" style="height: 100vh; overflow: hidden;">
+  <!-- Video background -->
+  <video autoplay muted loop playsinline class="position-absolute w-100 h-100" style="object-fit: cover; z-index: -1;">
+    <source src="backasli.mp4" type="video/mp4">
+    Browsermu tidak mendukung video.
+  </video>
+<!-- Konten di atas video -->
+  <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center text-white">
+    <h1 class="display-5 fw-bold">Selamat Datang di Prodigy Store</h1>
+    <p class="lead">Eksplor eBook pilihan terbaik dengan tampilan menarik</p>
+  </div>
+  
+</section>
+
+<!-- Pembatas -->
+<hr class="my-0" style="border-top: 2px solid #ddd;">
+
+
+
+<!-- HERO SECTION: LAMA DENGAN BACKGROUND GRADIENT -->
+<section class="hero text-white text-center d-flex align-items-center" 
+         style="background-image: url('section2.png'); background-size: cover; background-position: center; height: 40vh;">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Solusi Profesional untuk Belajar Secara Digital</h1>
+    <p class="lead">E-Book terkeren, Terkece, Teratas Hingga Ter-Hot!</p>
+  </div>
+</section>
+
+
+  <!-- Fitur Section -->
+  <section class="container py-5" data-aos="zoom-in">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-tags fa-3x text-primary mb-3"></i>
+        <h5>Harga Terjangkau</h5>
+        <p>Harga E-book Sangat Terjangkau</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-mobile-alt e fa-3x text-danger mb-3"></i>
+        <h5>Akses Mudah</h5> 
+        <p>Ebook dapat digunakan oleh perangkat mana pun</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-chart-line fa-3x text-danger mb-3"></i>
+        <h5>Tingkatkan Karir</h5>
+        <p>tentukan dan cari ebook untuk mengasah skill kamu!</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- Section Customisasi Tak Terbatas ala Shopify -->
+<section class="bg-light py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Kiri: Teks -->
+      <div class="col-md-6">
+        <small class="text-primary fw-semibold">DRIVE FOR UNLIMITED KNOWLEDGE</small>
+        <h2 class="fw-bold my-3">
+          Sharpen Your <span class="text-primary">Skill<br>With Unlimited E-Book</span>
+        </h2>
+        <p class="text-muted">
+          Kamu yang menggerakkan perubahan dan memimpin Masa Depan. Dorong minat untuk terus berkembang. Mulailah sekarang dengan Membaca Ebook terkeren Di situs ini!
+        </p>
+      </div>
+      <!-- Kanan: Daftar Keunggulan -->
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          <li class="d-flex align-items-start mb-4">
+            <span class="badge bg-primary rounded-circle me-3 p-3"><i class="fas fa-check text-white"></i></span>
+            <div>
+              <strong>Pilih eBook dan Baca Kapan Aja di Mana Aja</strong><br>
+              Tanpa ribet, langsung akses buku sesuai minat dan kebutuhan
+            </div>
+          </li>
+          <li class="d-flex align-items-start mb-4">
+            <span class="badge bg-primary rounded-circle me-3 p-3"><i class="fas fa-check text-white"></i></span>
+            <div>
+              <strong>Belajar 50% lebih Cepat dan Fleksibel</strong><br>
+              Materi ringkas, padat, dan langsung bisa kamu terapkan dalam kehidupan nyata
+            </div>
+          </li>
+          <li class="d-flex align-items-start mb-4">
+            <span class="badge bg-primary rounded-circle me-3 p-3"><i class="fas fa-check text-white"></i></span>
+            <div>
+              <strong>Fokus ke Perkembangan dirimu. bukan ribet teknis</strong><br>
+              Semua eBook sudah dikurasi biar kamu tinggal baca dan praktek, tanpa bingung mulai dari mana
+            </div>
+          </li>
+          <li class="d-flex align-items-start">
+            <span class="badge bg-primary rounded-circle me-3 p-3"><i class="fas fa-check text-white"></i></span>
+            <div>
+              <strong>Jadi yang pertama paham tren terbaru</strong><br>
+              Dengan update eBook rutin, kamu selalu selangkah lebih depan
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Kustomisasi + Gambar -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Kolom Teks -->
+      <div class="col-md-6">
+        <div class="bot-bubble-container d-flex align-items-start gap-3">
+  <img src="bot.png" class="bot-avatar" alt="Bot Avatar" />
+   <div class="bot-bubble p-3 shadow rounded-4 bg-white">
+            <p class="mb-2">📢 Hai! Yuk lihat koleksi eBook yang paling hot minggu ini!</p>
+            <a href="hotbook.html" class="btn btn-primary btn-sm">🔥 Lihat Hot Book</a>
+   </div>
+  <div class="bot-bubble">
+  </div>
+</div
+
+
+        <p class="container position-relative">
+         📖 Belajar itu nggak harus ribet. Kadang yang kamu butuhin cuma satu eBook yang tepat 
+         bisa dibaca kapan aja, di mana aja, dan langsung nyambung sama kebutuhanmu. Di sini, kami nggak sekadar jual file PDF, 
+         api ngasih kamu akses ke ilmu, inspirasi, dan semangat dari kreator-kreator lokal yang ngerti kamu. Mau belajar desain, 
+         bisnis, atau sekadar upgrade mindset? Semua ada, semua simpel, semua siap diakses dengan satu klik. Nggak ada biaya langganan, nggak ada drama 
+        cuma kamu dan eBook yang bantu kamu berkembang
+        </p>
+         <h2 class="fw-bold my-3">
+          <br><span class="text-primary"></span>
+        </h2>
+        <ul class="list-unstyled">
+          <li class="d-flex align-items-start mb-3">
+            <span class="badge bg-primary rounded-circle me-3 p-2"><i class="fas fa-tools text-white"></i></span>
+            <div>
+              <strong>Akses Tanpa Batas</strong><br>
+              Nikmati kebebasan membaca kapan saja, di mana saja. Semua e-book kesukaanmu siap diakses dari berbagai perangkat, memberikanmu kendali penuh atas petualangan membacamu.
+            </div>
+          </li>
+          <li class="d-flex align-items-start mb-3">
+            <span class="badge bg-primary rounded-circle me-3 p-2"><i class="fas fa-plug text-white"></i></span>
+            <div>
+              <strong>Pengalaman Membaca Fleksibel</strong><br>
+              Sesuaikan pengalaman membacamu sesuai keinginan. Dengan berbagai pilihan pengaturan tampilan, font, dan mode baca, e-book kami dirancang untuk kenyamanan matamu dan membantumu fokus pada cerita atau informasi yang ada
+            </div>
+          </li>
+          <li class="d-flex align-items-start">
+            <span class="badge bg-primary rounded-circle me-3 p-2"><i class="fas fa-lock text-white"></i></span>
+            <div>
+              <strong>Interaksi Penuh dan Aman</strong><br>
+              Berinteraksi langsung dengan konten melalui fitur bookmark, highlight, dan catatan pribadi. Data dan kemajuan membacamu terjamin aman 24/7, memungkinkanmu kembali kapan saja tanpa khawatir
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Kolom Gambar -->
+      <div class="col-md-6 text-center">
+        <img src="https://img.freepik.com/free-vector/website-creator-concept-illustration_114360-4448.jpg" alt="Ilustrasi Kustomisasi" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Fitur -->
+<section class="py-5">
+  <div class="container" data-aos="zoom-in">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-book-open fa-3x mb-3 text-primary"></i>
+        <h5 class="fw-bold">Akses Cepat</h5>
+        <p>Tanpa login ribet. Cukup klik dan baca. Cocok untuk generasi digital yang butuh kecepatan dan efisiensi.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-star fa-3x mb-3 text-warning"></i>
+        <h5 class="fw-bold">Kualitas Premium</h5>
+        <p>Setiap eBook telah dikurasi oleh tim editor agar kamu hanya membaca konten yang relevan dan terpercaya.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <i class="fas fa-heart fa-3x mb-3 text-danger"></i>
+        <h5 class="fw-bold">User Friendly</h5>
+        <p>Tampilan antarmuka yang ramah pengguna bikin kamu nyaman jelajahi katalog, dari pemula sampai profesional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: DESKRIPSI EBOOK (Ukuran Gambar Lebih Besar) -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center" data-aos="fade-up">
+      
+      <!-- Gambar Kiri -->
+      <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+        <img src="kemana.png" alt="eBook Digital" class="img-fluid rounded shadow" style="max-width: 90%; height: auto;">
+      </div>
+      
+      <!-- Teks Kanan -->
+      <div class="col-md-6">
+        <h3 class="fw-bold mb-3">Kuasai Dunia Digital Lewat eBook</h3>
+
+        <p><strong>ID</strong> Temukan eBook digital terbaik yang disusun dengan pendekatan ilmiah dan desain antarmuka yang ramah pengguna. Belajar jadi lebih fleksibel, cepat, dan menyenangkan.</p>
+
+        <p><strong>GB</strong> Discover top-quality eBooks designed with scientific insight and user-friendly interface. Learn flexibly, faster, and more enjoyably.</p>
+
+        <p><strong>ID</strong> Cukup satu klik untuk akses ribuan pengetahuan. Mulai sekarang dan jadikan membaca sebagai gaya hidup digitalmu.</p>
+
+        <p><strong>GB</strong> One click to unlock thousands of insights. Start now and make reading part of your digital lifestyle.</p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Section 4: Nilai / Testimoni -->
+<section class="py-5 bg-white">
+  <div class="container" data-aos="fade-right">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="testimoni.png" class="img-fluid rounded" alt="Testimoni">
+      </div>
+      <div class="col-md-6">
+        <blockquote class="blockquote">
+          <p class="mb-0 fs-5">"Semenjak pakai DiggiLogBok, belajar dan baca eBook jadi rutinitas favoritku. Sangat praktis & modern!"</p>
+          <footer class="blockquote-footer mt-2">Fajar, Mahasiswa Digital Marketing</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- FOOTER -->
+<footer class="text-white pt-5 pb-3" style="background-color: #343a40;">
+  <div class="container">
+    <div class="row">
+      
+  
+    <!-- Kontak -->
+      <div class="col-md-4 mb-4">
+        <h5>📩 Kontak</h5>
+        <p class="small mb-1"><i class="fas fa-envelope"></i> email@example.com</p>
+        <p class="small"><i class="fas fa-phone"></i> +62 857-6250-9887</p>
+      </div>
+
+      <!-- Sosial Media -->
+      <div class="col-md-4 mb-4">
+        <h5>🌐 Ikuti Kami</h5>
+        <a href="https://www.instagram.com/prodigystore.id?igsh=d2g2bjhiNW5tMDZ6" class="text-white me-3" target="_blank">
+          <i class="fab fa-instagram fa-lg"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577422133828" class="text-white me-3" target="_blank">
+          <i class="fab fa-facebook fa-lg"></i>
+        </a>
+        <a href="https://wa.me/6285762509887" class="text-white" target="_blank">
+          <i class="fab fa-whatsapp fa-lg"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="border-top border-secondary">
+    <p class="text-center small mb-0">&copy; 2025 Katalog Produk Digital — All rights reserved</p>
+  </div>
+</footer>
+
+  <!-- WhatsApp Floating -->
+  <script>
+    window.onload = function () {
+      let chat = document.createElement("a");
+      chat.href = "https://wa.me/6281234567890";
+      chat.target = "_blank";
+      chat.innerHTML = `<img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">`;
+      document.body.appendChild(chat);
+    };
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
