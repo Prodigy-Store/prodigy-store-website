@@ -67,36 +67,6 @@
           <a href="https://forms.gle/RwVSLQSRhVbbJUh97" target="_blank" class="btn btn-outline-success me-2">Saya Setuju</a>
             <a href="https://forms.gle/RwVSLQSRhVbbJUh97" target="_blank" class="btn btn-outline-danger">Tidak Setuju</a>
               </div>
-
-
-        <div id="responseBox" class="alert alert-success mt-3 d-none">Terima kasih atas dukunganmu! ✅</div>
-
-<script>
-  function kirimDukungan(jawaban) {
-  const responseBox = document.getElementById('responseBox');
-  responseBox.textContent = "Mengirim...";
-  responseBox.classList.remove('d-none', 'alert-success', 'alert-danger');
-    fetch("https://script.google.com/macros/s/AKfycbwGUVJf7pU7avCo6yX5qv0kAV5fJmE7wVqajgtYi12ToRikoKBPFx_XCo80ojXVHSlD/exec", {
-  method: "POST",
-  body: JSON.stringify({ jawaban }),
-  headers: {
-    "Content-Type": "application/json"
-  }
-})
-
-.then(res => res.json())
-  .then(data => {
-    responseBox.textContent = "Terima kasih atas dukunganmu! ✅";
-    responseBox.classList.add('alert-success');
-  })
-  .catch(err => {
-    responseBox.textContent = "Gagal mengirim. Coba lagi.";
-    responseBox.classList.add('alert-danger');
-    console.error("Error:", err);
-  });
-}
-</script>
-
         </div>
       </div>
     </div>
