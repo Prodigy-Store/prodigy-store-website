@@ -71,18 +71,28 @@
 
 <script>
   function kirimDukungan(jawaban) {
-    fetch("https://script.google.com/macros/s/AKfycbxpJoGfeBmivCdjG24mXs2avt53JqEG4HghRaTZTQ-8B_q84-UgspBOlulDznhCX29t/exec", {
-      method: "POST",
-      body: JSON.stringify({ jawaban }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-    .then(res => {
-      document.getElementById('responseBox').classList.remove('d-none');
-    })
-    .catch(err => console.error("Gagal kirim:", err));
+  const responseBox = document.getElementById('responseBox');
+  responseBox.textContent = "Mengirim...";
+  responseBox.classList.remove('d-none', 'alert-success', 'alert-danger');
+    fetch("https://script.google.com/macros/s/AKfycbwGUVJf7pU7avCo6yX5qv0kAV5fJmE7wVqajgtYi12ToRikoKBPFx_XCo80ojXVHSlD/exec", {
+  method: "POST",
+  body: JSON.stringify({ jawaban }),
+  headers: {
+    "Content-Type": "application/json"
   }
+})
+
+.then(res => res.json())
+  .then(data => {
+    responseBox.textContent = "Terima kasih atas dukunganmu! ✅";
+    responseBox.classList.add('alert-success');
+  })
+  .catch(err => {
+    responseBox.textContent = "Gagal mengirim. Coba lagi.";
+    responseBox.classList.add('alert-danger');
+    console.error("Error:", err);
+  });
+}
 </script>
 
         </div>
@@ -99,7 +109,7 @@
     <!-- Kontak -->
       <div class="col-md-4 mb-4">
         <h5>📩 Kontak</h5>
-        <p class="small mb-1"><i class="fas fa-envelope"></i> email@example.com</p>
+        <p class="small mb-1"><i class="fas fa-envelope"></i> Prodigystore2025@gmail.com</p>
         <p class="small"><i class="fas fa-phone"></i> +62 857-6250-9887</p>
       </div>
 
