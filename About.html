@@ -63,32 +63,9 @@
           <p>Kami mengundang pengguna untuk memberikan dukungan dan masukan sebagai pertimbangan untuk mengembangkan platform ini ke tahap berikutnya.</p>
 
           <h3>Apakah kamu setuju jika website ini dikembangkan lebih lanjut?</h3>
-  <button class="btn btn-outline-success m-2" onclick="kirimDukungan('Saya Setuju')">Saya Setuju</button>
-  <button class="btn btn-outline-danger m-2" onclick="kirimDukungan('Tidak Setuju')">Tidak Setuju</button>
+          <a href="https://forms.gle/8or8RkKHyX3jBwfZ9" class="btn btn-outline-success me-2">Saya Setuju</a>
+          <a href="https://forms.gle/8or8RkKHyX3jBwfZ9" target="_blank" class="btn btn-outline-danger">Tidak Setuju</a>
 
-  <div id="responseBox" class="mt-3"></div>
-
-  <script>
-    function kirimDukungan(jawaban) {
-      const responseBox = document.getElementById('responseBox');
-      responseBox.textContent = "Mengirim...";
-      fetch("https://script.google.com/macros/s/AKfycbxtuekx874rdoNoVLqzcxYUI0hZnQGmx74sa2YkFtdXxg-CX87L_uglzO_Zi2oS-XyzLA/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ jawaban })
-      })
-      .then(res => res.json())
-      .then(data => {
-        responseBox.textContent = "Terima kasih atas dukunganmu! ✅";
-        responseBox.className = "alert alert-success mt-3";
-      })
-      .catch(err => {
-        responseBox.textContent = "Gagal mengirim. Coba lagi.";
-        responseBox.className = "alert alert-danger mt-3";
-        console.error("Error:", err);
-      });
-    }
-  </script>
 
           
   </section>
